@@ -1,0 +1,65 @@
+html {
+  background-color: white;
+  margin: 0;
+}
+.download_file {
+  /* background-image: url(../images/full_leather_dark.svg);
+  background-position: cover; */
+  background-color: transparent;
+  align-items: center;
+  width: 80vw;
+  height: 90vh;
+  position: absolute;
+  z-index: 2;
+  margin: 25vh 10vh 10vh 35vh;
+}
+
+.download_file_shadow {
+  position: absolute;
+  background-color: transparent;
+  width: 90vw;
+  height: 90vh;
+  margin: 10vh 0 0 18vh;
+  z-index: 1;
+  box-shadow: inset 0px 0px 10px 15px #262626;
+}
+
+.down_title {
+  padding: auto;
+  color: white;
+  text-align: center;
+  font-size: 6vh;
+  margin: 10vh 0 0 0;
+}
+
+.link_input {
+  width: 40%;
+  padding-bottom: 20px;
+  margin-left: 30%;
+  margin-right: auto;
+  margin-top: 2vh;
+  font-size: 350%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 30px;
+  outline: none;
+}
+
+.download_link {
+  width: 10%;
+  color: white;
+  background-color: black;
+  opacity: 0.1;
+  margin-top: 5%;
+  margin-left: 45%;
+  padding: 1%;
+  border-color: black;
+  border-radius: 60px;
+  font-size: 350%;
+  outline: none;
+}
+.download_link:hover {
+  cursor: pointer;
+  color: white;
+  opacity: 0.8;
+}

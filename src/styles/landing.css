@@ -1,0 +1,57 @@
+.left_panel {
+  margin-left: 500px;
+  padding: 0;
+  background-color: red;
+  height: 100vh;
+}
+
+.left_panel_title {
+  padding-top: 20vh;
+  margin: 0;
+}
+
+.function_button_container {
+  padding: 0;
+  align-content: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  z-index: 0;
+}
+
+.function_button {
+  width: 30vh;
+  margin: 10vh auto 0 auto;
+  height: 30vh;
+  border-radius: 50%;
+  border-style: none;
+  font-size: 2vw;
+  font-family: "Montserrat Semi Bold";
+  letter-spacing: 2.5px;
+  outline: none;
+}
+
+.function_button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border-color: black;
+  border-style: solid;
+}
+
+.subtext_container {
+  position: absolute;
+  background-color: none;
+  z-index: 2;
+  margin: 38% auto auto 4%;
+  width: 23%;
+}
+
+.subtext {
+  color: black;
+  font-size: 28px;
+  font-family: "Montserrat Semi Bold";
+  font-weight: normal;
+  letter-spacing: 2px;
+}

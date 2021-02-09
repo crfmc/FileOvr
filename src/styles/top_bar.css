@@ -1,0 +1,52 @@
+/* Below is styling for the top-bar */
+.top_bar {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  z-index: 5;
+  position: fixed;
+  width: 100vw;
+}
+
+.logo_button_container {
+  height: 10vh;
+  margin-left: 10vh;
+  margin-right: 60vw;
+  margin-top: 4vh;
+  width: 10vw;
+}
+
+.logo {
+  color: #000000;
+  font-family: "Montserrat Semi Bold";
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.top_bar_button_container {
+  width: 40vw;
+  height: 10vh;
+  margin-right: 10vh;
+}
+
+.top_bar_button {
+  text-align: right;
+  font-family: "Montserrat Semi Bold";
+  width: 15vh;
+  font-weight: bold;
+  font-size: 130%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 4vh 0;
+  /* margin-right: 7vh; */
+  margin-left: auto;
+}
+
+.give_pointer:hover {
+  cursor: pointer;
+}
+/* End styling for top bar */
