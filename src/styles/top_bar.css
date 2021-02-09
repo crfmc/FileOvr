@@ -29,6 +29,8 @@
   width: 40vw;
   height: 10vh;
   margin-right: 10vh;
+  padding-left: 10vh;
+  align-content: right;
 }
 
 .top_bar_button {
@@ -42,7 +44,6 @@
   outline: none;
   padding: 0;
   margin: 4vh 0;
-  /* margin-right: 7vh; */
   margin-left: auto;
 }
 
