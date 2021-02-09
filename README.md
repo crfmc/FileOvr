@@ -1,6 +1,6 @@
 # FileOvr
 
-For details on how to open this file, scroll down to the CLI react commands.
+A filesharing website created by [CJ](), [Kanji](), and [Cesar]()
 
 #### Running
 
