@@ -2,7 +2,9 @@
 
 A filesharing website created by [CJ](), [Kanji](), and [Cesar]()
 
-#### Running
+# Running
+
+From the project directory...
 
 - `yarn start` to run the app and open [http://localhost:3000](http://localhost:3000).
 - `yarn test` to launch the test runner in interactove watch mode.
@@ -11,7 +13,7 @@ A filesharing website created by [CJ](), [Kanji](), and [Cesar]()
 
 # Bugs
 
-- Site is not entirely responsive
+- FrontEnd not entirely responsive.
 
 ### Acknowledgements
 
