@@ -11,7 +11,7 @@
 .logo_button_container {
   height: 10vh;
   margin-left: 10vh;
-  margin-right: 60vw;
+  margin-right: 65%;
   margin-top: 4vh;
   width: 10vw;
 }
@@ -26,25 +26,23 @@
 }
 
 .top_bar_button_container {
-  width: 40vw;
+  display: flex;
+  width: 35%;
   height: 10vh;
   margin-right: 10vh;
-  padding-left: 10vh;
   align-content: right;
 }
 
 .top_bar_button {
-  text-align: right;
   font-family: "Montserrat Semi Bold";
-  width: 15vh;
+  width: 50%;
   font-weight: bold;
-  font-size: 130%;
+  font-size: 100%;
   background-color: transparent;
   border: none;
   outline: none;
   padding: 0;
-  margin: 4vh 0;
-  margin-left: auto;
+  margin: 5% 0 5% 10%;
 }
 
 .give_pointer:hover {

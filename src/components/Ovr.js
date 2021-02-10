@@ -16,13 +16,11 @@ export const Ovr = () => {
 
     // SEND BUTTON — dynamic styling
     const baseStyle_sendButton = {
-        marginLeft: "41.5vw",
         backgroundColor: "#F2F2F2",
         color: "#4d4d4d",
         boxShadow: "0px 0px 10px 1px #4d4d4d, 0px 0px 10px 1px #4d4d4d inset"
     }
     const slideLeftStyle_sendButton = {
-        marginLeft: "41.5vw",
         backgroundColor: "#F2F2F2",
         color: "#4d4d4d",
         boxShadow: "0px 0px 25px 5px #4d4d4d inset"
@@ -30,7 +28,6 @@ export const Ovr = () => {
 
     // RECEIVE BUTTON — dynamic styling
     const baseStyle_receiveButton = {
-        marginLeft: "41.5vw",
         backgroundColor: "#333333",
         color: "white",
         borderColor: "transparent",
@@ -38,7 +35,6 @@ export const Ovr = () => {
     }
     
     const slideRightStyle_receiveButton = {
-        marginLeft: "41.5vw",
         backgroundColor: "#333333",
         color: "white",
         borderColor: "transparent",
@@ -102,11 +98,21 @@ export const Ovr = () => {
                     >
                         <h1 className="pop_up_subtext_h1">Help</h1>
                         <h4 className="pop_up_subtext_h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet pretium libero, a suscipit nunc rutrum ultrices. Proin vel est at enim viverra scelerisque. Mauris condimentum, arcu quis hendrerit lacinia, risus lacus fermentum tellus, et euismod justo ipsum et ipsum. Curabitur id lobortis quam. Suspendisse ut dignissim quam. Nunc pharetra lectus vitae est feugiat, vitae mollis magna interdum. Maecenas pharetra urna sem, nec gravida metus interdum id. Fusce ac placerat lectus, et auctor purus. Duis sapien ligula, venenatis a pellentesque eget, ullamcorper eget ante. Sed non arcu eu nisi facilisis porta. Nam molestie ligula vel eleifend accumsan. Ut rutrum ligula in felis viverra, vitae cursus lacus rhoncus. Praesent eu arcu eleifend, sollicitudin ex non, maximus risus. Duis eget ultrices risus. Nam id leo risus. Aliquam erat volutpat. Integer suscipit, sapien quis mattis laoreet, urna ex porta urna, accumsan condimentum metus turpis a erat. Integer vitae velit quis sapien pharetra facilisis. Nam ut sagittis dolor. Integer pharetra, augue non suscipit eleifend, tortor massa commodo nisi, vitae egestas odio mi eu sem. Nullam nulla justo, tincidunt id tristique a, egestas sed elit. Nullam nisi felis, rhoncus nec eleifend sed, convallis sed quam. Proin massa nibh, dapibus at ornare vel, tincidunt eu nulla. Morbi purus felis, fermentum ac velit ac, condimentum faucibus erat.
-            </h4>
+                        </h4>
                         <h4 className="pop_up_subtext_h4"> Curabitur id lobortis quam. Suspendisse ut dignissim quam. Nunc pharetra lectus vitae est feugiat, vitae mollis magna interdum. Maecenas pharetra urna sem, nec gravida metus interdum id. Fusce ac placerat lectus, et auctor purus. Duis sapien ligula, venenatis a pellentesque eget, ullamcorper eget ante. Sed non arcu eu nisi facilisis porta. Nam molestie ligula vel eleifend accumsan. Ut rutrum ligula in felis viverra, vitae cursus lacus rhoncus. Praesent eu arcu eleifend, sollicitudin ex non, maximus risus. Duis eget ultrices risus. Nam id leo risus. Aliquam erat volutpat. Integer suscipit, sapien quis mattis laoreet, urna ex porta urna, accumsan condimentum metus turpis a erat. Integer vitae velit quis sapien pharetra facilisis. Nam ut sagittis dolor. Integer pharetra, augue non suscipit eleifend, tortor massa commodo nisi, vitae egestas odio mi eu sem. Nullam nulla justo, tincidunt id tristique a, egestas sed elit. Nullam nisi felis, rhoncus nec eleifend sed, convallis sed quam. Proin massa nibh, dapibus at ornare vel, tincidunt eu nulla. Morbi purus felis, fermentum ac velit ac, condimentum faucibus erat.
-            </h4>
+                        </h4>
                     </motion.button>
                 }
+                <div className="bg_letters_container">
+                    <div
+                        className="bg_letters"
+                        style={
+                            (slideLeft || slideRight) ? { display: "none" }
+                                : {}
+                        }
+                    >
+                    </div>
+                </div>
                 <motion.div
                     className="full_panel_container"
                     initial={{ x: "-40vw" }}
@@ -122,18 +128,9 @@ export const Ovr = () => {
                         duration: 1
                     }}
                 >
-                    <div className="full_panel_left"></div>
-                    <div className="full_panel_right"></div>
-                    <div className="bg_letters_container">
-                        <div
-                            className="bg_letters"
-                            style={
-                                (slideLeft || slideRight) ? { display: "none" }
-                                    : {}
-                            }
-                        >
-                        </div>
-                    </div>
+                <div className="full_panel_left"></div>
+                <div className="full_panel_right"></div>
+                
                     
                 </motion.div>
                 <motion.div className="function_button_container" >
