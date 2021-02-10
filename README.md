@@ -14,6 +14,7 @@ From the project directory...
 # Bugs
 
 - FrontEnd not entirely responsive.
+- Download page (refresh and shadow alignment)
 
 ### Acknowledgements
 
