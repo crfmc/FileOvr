@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   height: 10vh;
-  z-index: 5;
+  z-index: 10;
   position: fixed;
   width: 100vw;
 }
@@ -12,17 +12,23 @@
   height: 10vh;
   margin-left: 10vh;
   margin-right: 65%;
-  margin-top: 4vh;
+  margin-top: 3vh;
   width: 10vw;
 }
 
 .logo {
+  text-align: center;
   color: #000000;
   font-family: "Montserrat Semi Bold";
   text-decoration: none;
-  font-size: 18px;
+  font-size: 100%;
   font-weight: 600;
   letter-spacing: 2px;
+  margin: auto;
+  border: none;
+  background-color: white;
+  outline: none;
+  height: 50%;
 }
 
 .top_bar_button_container {

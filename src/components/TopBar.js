@@ -1,13 +1,20 @@
 import '../styles/top_bar.css';
 
+function refreshPage() {
+    window.parent.location = window.parent.location.href;
+}
+
 // Function component for the navigation bar
 export function TopBar(props) {
     return (
         <div className="top_bar">
             <div className="logo_button_container">
-                <a className="logo give_pointer" href="">
+                <button
+                    className="logo give_pointer"
+                    onClick={() => refreshPage()}
+                >
                     OVR.
-                </a>
+                </button>
             </div>
             <div className="top_bar_button_container">
                 <button
