@@ -14,7 +14,7 @@ html {
 .subtext {
   color: black;
   font-size: 28px;
-  font-family: "Montserrat Semi Bold";
+  font-family: Montserrat, sans-serif;
   font-weight: normal;
   letter-spacing: 2px;
 }
@@ -31,19 +31,19 @@ html {
 }
 
 .pop_up_subtext_h4 {
-  font-family: "Montserrat Semi Bold";
+  font-family: Montserrat, sans-serif;
   font-weight: 100;
   margin: 2% 10%;
 }
 
 .pop_up_subtext_h2 {
-  font-family: "Montserrat Semi Bold";
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
   margin: 2% 10%;
 }
 
 .pop_up_subtext_h1 {
-  font-family: "Montserrat Semi Bold";
+  font-family: Montserrat, sans-serif;
   font-weight: 600;
   font-size: 350%;
   letter-spacing: 3px;
@@ -90,6 +90,7 @@ html {
   width: 100%;
   height: 150%;
   margin-left: auto;
+  margin-top: 5vh;
   z-index: 1;
   align-content: center;
 }
@@ -113,7 +114,7 @@ html {
   width: 100%;
   height: 90vh;
   z-index: 1;
-  margin-top: 5vh;
+  margin-top: 10vh;
   z-index: 2;
 }
 
@@ -124,7 +125,7 @@ html {
   border-radius: 50%;
   border-style: none;
   font-size: 2vw;
-  font-family: "Montserrat";
+  font-family: Montserrat, sans-serif;
   letter-spacing: 5px;
   outline: none;
   font-weight: 500;
