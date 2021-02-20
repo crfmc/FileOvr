@@ -9,21 +9,6 @@ export default class Upload extends Component {
     return (
       <>
         <motion.div
-          className={styles.upload_file_shadow}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1.5,
-          }}
-          transition={{
-            duration: 1.5,
-            type: "tween",
-            dampening: 50,
-            stiffness: 50,
-          }}
-        ></motion.div>
-        <motion.div
           className={styles.upload_file}
           initial={{
             x: -900,

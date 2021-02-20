@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+	 viewBox="0 0 1366 768" style="enable-background: new 0 0 1366 768" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
 </style>
@@ -10,7 +10,7 @@
 <g id="OVR_x5F_Background">
 	<g>
 		
-			<image style="overflow:visible;" width="1452" height="777" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABawAAAMJCAYAAADvX3FaAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+			<image x="50" y="12" style="overflow: visible" width="1452" height="777" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABawAAAMJCAYAAADvX3FaAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
 GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAABjAVJREFUeNrsvctyY0myZUl6RvAF
 kvDIQY9qUCLF76tvyPyF+j62SA9q1AMPEiD4gN9ktOkJ3+hF9eP3Ot1DpE6KLBWBkADOw44tVQxs
 m207OjIMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAM
@@ -1790,7 +1790,7 @@ SimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkop
 pZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWU
 UkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJK
 KaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSiml
-lFJKKaWUUkoppX5H/yfAAHXsli2OAiDgAAAAAElFTkSuQmCC" transform="matrix(1 0 0 1 -43 34)">
+lFJKKaWUUkoppX5H/yfAAHXsli2OAiDgAAAAAElFTkSuQmCC" transform="matrix(1,0,0,1,-43,34)">
 		</image>
 	</g>
 	<line class="st0" x1="503" y1="184" x2="503" y2="184"/>

@@ -206,8 +206,27 @@ export const Ovr = () => {
             duration: 1,
           }}
         >
-          <div className={styles.full_panel_left}></div>
-          <div className={styles.full_panel_right}></div>
+          <div className={styles.full_panel_left}>
+            <motion.div
+              className={styles.upload_file_shadow}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1.5,
+              }}
+              transition={{
+                duration: 1.5,
+                type: "tween",
+                dampening: 50,
+                stiffness: 50,
+              }}
+            ></motion.div>
+            <div className={styles.bg_o}></div>
+          </div>
+          <div className={styles.full_panel_right}>
+            <div className={styles.bg_o}></div>
+          </div>
         </motion.div>
         <motion.div className={styles.function_button_container}>
           {/* SEND BUTTON */}

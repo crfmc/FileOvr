@@ -62,8 +62,8 @@ html {
 }
 
 .full_panel_container {
-  position: absolute;
-  height: 100vh;
+  position: relative;
+  height: 90vh;
   width: 180vw;
   background-repeat: no-repeat;
   z-index: 0;
@@ -76,6 +76,17 @@ html {
   width: 90vw;
   background-image: url(../images/bg_light.svg);
   background-size: cover;
+}
+
+.upload_file_shadow {
+  position: relative;
+  background-color: transparent;
+  width: 90vw;
+  height: 90vh;
+  /* margin: 10vh 0; */
+  margin: none;
+  z-index: 1;
+  box-shadow: inset 0px 0px 20px 5px #4d4d4d;
 }
 
 .full_panel_right {
