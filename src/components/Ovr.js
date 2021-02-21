@@ -15,12 +15,12 @@ export const Ovr = () => {
   const baseStyle_sendButton = {
     backgroundColor: "#F2F2F2",
     color: "#4d4d4d",
-    boxShadow: "0px 0px 10px 1px #4d4d4d, 0px 0px 10px 1px #4d4d4d inset",
+    boxShadow: "0px 0px 10px 1px #4d4d4d",
   };
   const slideLeftStyle_sendButton = {
     backgroundColor: "#F2F2F2",
     color: "#4d4d4d",
-    boxShadow: "0px 0px 25px 5px #4d4d4d inset",
+    // boxShadow: "0px 0px 25px 5px #4d4d4d inset",
   };
 
   // RECEIVE BUTTON — dynamic styling
@@ -28,14 +28,14 @@ export const Ovr = () => {
     backgroundColor: "#333333",
     color: "white",
     borderColor: "transparent",
-    boxShadow: "0px 0px 5px 1px #4d4d4d, #4d4d4d 0px 0px 25px 5px inset",
+    boxShadow: "0px 0px 5px 1px #4d4d4d",
   };
 
   const slideRightStyle_receiveButton = {
     backgroundColor: "#333333",
     color: "white",
     borderColor: "transparent",
-    boxShadow: "0px 0px 5px 10px #262626, #262626 0px 0px 25px 5px inset",
+    boxShadow: "0px 0px 5px 10px #262626",
   };
 
   // POP-UP STYLING
@@ -183,7 +183,7 @@ export const Ovr = () => {
             </h4>
           </motion.button>
         )}
-        <div className={styles.bg_letters_container}>
+        <div className={(styles.bg_letters_container, styles.hidden)}>
           <div
             className={styles.bg_letters}
             style={slideLeft || slideRight ? { display: "none" } : {}}
@@ -207,25 +207,27 @@ export const Ovr = () => {
           }}
         >
           <div className={styles.full_panel_left}>
-            <motion.div
-              className={styles.upload_file_shadow}
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1.5,
-              }}
-              transition={{
-                duration: 1.5,
-                type: "tween",
-                dampening: 50,
-                stiffness: 50,
-              }}
-            ></motion.div>
-            <div className={styles.bg_o}></div>
+            {slideLeft && (
+              <motion.div
+                className={styles.upload_file_shadow}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1.5,
+                }}
+                transition={{
+                  duration: 1.5,
+                  type: "tween",
+                  dampening: 50,
+                  stiffness: 50,
+                }}
+              ></motion.div>
+            )}
+            {/* <div className={styles.bg_o}></div> */}
           </div>
           <div className={styles.full_panel_right}>
-            <div className={styles.bg_o}></div>
+            {/* <div className={styles.bg_o}></div> */}
           </div>
         </motion.div>
         <motion.div className={styles.function_button_container}>

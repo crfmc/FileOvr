@@ -20,7 +20,8 @@ html {
 }
 
 .pop_up {
-  background: rgba(255, 255, 255, 0.25);
+  /* background: rgba(255, 255, 255, 0.25); */
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 8px 32px 0 #4d4d4d;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -55,11 +56,11 @@ html {
   flex-direction: column;
 }
 
-.top_bar_container {
-  position: fixed;
+/* .top_bar_container {
+  position: relative;
   height: 10vh;
   width: 100vw;
-}
+} */
 
 .full_panel_container {
   position: relative;
@@ -74,12 +75,20 @@ html {
 .full_panel_left {
   height: 100vh;
   width: 90vw;
-  background-image: url(../images/bg_light.svg);
+  background-image: url(../images/bg_light_fix.svg);
   background-size: cover;
 }
 
+/* .bg_o {
+  background-image: url(../images/bg_o.svg);
+  margin: auto;
+  height: 50vh;
+  width: 50vh;
+  z-index: 5;
+} */
+
 .upload_file_shadow {
-  position: relative;
+  /* position: relative; */
   background-color: transparent;
   width: 90vw;
   height: 90vh;
@@ -92,7 +101,7 @@ html {
 .full_panel_right {
   height: 100vh;
   width: 90vw;
-  background-image: url(../images/bg_dark.svg);
+  background-image: url(../images/bg_dark_fix.svg);
   background-size: cover;
 }
 

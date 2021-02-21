@@ -4,22 +4,21 @@
   flex-direction: row;
   height: 10vh;
   z-index: 10;
-  position: fixed;
+  position: relative;
   width: 100vw;
 }
 
 .logo_button_container {
-  height: 10vh;
+  height: 5vh;
   margin-left: 10vh;
   margin-right: 65%;
-  margin-top: 3vh;
+  margin-top: 5vh;
   width: 10vw;
 }
 
 .logo {
-  text-align: center;
   color: #000000;
-  font-family: "Montserrat Semi Bold";
+  font-family: Montserrat, sans-serif;
   text-decoration: none;
   font-size: 100%;
   font-weight: 600;
@@ -34,13 +33,19 @@
 .top_bar_button_container {
   display: flex;
   width: 35%;
-  height: 10vh;
+  height: 7vh;
   margin-right: 10vh;
-  align-content: right;
+  margin-top: 3vh;
+  /* align-content: right; */
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .top_bar_button {
-  font-family: "Montserrat Semi Bold";
+  font-family: Montserrat, sans-serif;
   width: 50%;
   font-weight: bold;
   font-size: 100%;
@@ -48,7 +53,8 @@
   border: none;
   outline: none;
   padding: 0;
-  margin: 5% 0 5% 10%;
+  top: none;
+  /* margin: 5% 0 5% 10%; */
 }
 
 .give_pointer:hover {
