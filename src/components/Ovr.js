@@ -13,13 +13,13 @@ export const Ovr = () => {
 
   // SEND BUTTON — dynamic styling
   const baseStyle_sendButton = {
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "#ffffff",
     color: "#4d4d4d",
-    boxShadow: "0px 0px 10px 1px #4d4d4d",
+    boxShadow: "0px 0px 10px 1px #000000",
   };
   const slideLeftStyle_sendButton = {
-    backgroundColor: "#F2F2F2",
-    color: "#4d4d4d",
+    backgroundColor: "#ffffff",
+    color: "#000000",
     // boxShadow: "0px 0px 25px 5px #4d4d4d inset",
   };
 
@@ -28,14 +28,14 @@ export const Ovr = () => {
     backgroundColor: "#333333",
     color: "white",
     borderColor: "transparent",
-    boxShadow: "0px 0px 5px 1px #4d4d4d",
+    boxShadow: "0px 0px 10px 1px #000000",
   };
 
   const slideRightStyle_receiveButton = {
     backgroundColor: "#333333",
     color: "white",
     borderColor: "transparent",
-    boxShadow: "0px 0px 5px 10px #262626",
+    boxShadow: "0px 0px 5px 5px #000000",
   };
 
   // POP-UP STYLING
@@ -60,7 +60,7 @@ export const Ovr = () => {
               y: 0,
             }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
               type: "tween",
             }}
             className={styles.pop_up}
@@ -131,7 +131,7 @@ export const Ovr = () => {
               y: 0,
             }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
               type: "tween",
             }}
           >
@@ -224,10 +224,17 @@ export const Ovr = () => {
                 }}
               ></motion.div>
             )}
-            {/* <div className={styles.bg_o}></div> */}
+            {!(slideLeft || slideRight) &&
+              <div className={styles.bg_o}></div>
+            }
           </div>
+          {!(slideLeft || slideRight) &&
+              <div className={styles.bg_v}></div>
+            }
           <div className={styles.full_panel_right}>
-            {/* <div className={styles.bg_o}></div> */}
+            {!(slideLeft || slideRight) &&
+              <div className={styles.bg_r}></div>
+            }
           </div>
         </motion.div>
         <motion.div className={styles.function_button_container}>

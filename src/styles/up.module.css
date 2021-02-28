@@ -13,7 +13,7 @@
 }
 
 .upload_file_prompt {
-  width: 100%;
+  width: 80%;
   height: 30vh;
   margin: 10vh auto 5vh auto;
   font-size: 200%;
@@ -21,7 +21,7 @@
 }
 
 .up_subtext {
-  font-size: 250%;
+  font-size: 150%;
   margin: 0 0 1vh 0;
   text-align: center;
 }
@@ -49,17 +49,17 @@
 }
 
 .code_from_upload_container {
-  width: 100%;
+  width: 80%;
   height: 30vh;
   margin: 0vh auto 10vh auto;
-  font-size: 300%;
+  font-size: 200%;
   color: #4d4d4d;
 }
 
 .code_from_upload {
   background-color: white;
   border-radius: 10px;
-  font-size: 150%;
+  font-size: 3vw;
   width: 30vw;
   height: 10vh;
   margin: auto;

@@ -9,26 +9,26 @@ export function TopBar(props) {
   return (
     <div className={styles.top_bar}>
       <div className={styles.logo_button_container}>
-        <button
+        <h1
           className={` ${styles.logo} ${styles.give_pointer}`}
           onClick={() => refreshPage()}
         >
           OVR.
-        </button>
+        </h1>
       </div>
       <div className={styles.top_bar_button_container}>
-        <button
-          className={` ${styles.top_bar_button} ${styles.give_pointer}`}
-          onClick={props.onClickAbout}
-        >
-          About Us
-        </button>
-        <button
+        <p
           className={` ${styles.top_bar_button} ${styles.give_pointer}`}
           onClick={props.onClickHelp}
         >
           Help
-        </button>
+        </p>
+        <p
+          className={` ${styles.top_bar_button} ${styles.give_pointer}`}
+          onClick={props.onClickAbout}
+        >
+          About
+        </p>
       </div>
     </div>
   );
