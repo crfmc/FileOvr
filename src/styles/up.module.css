@@ -37,6 +37,7 @@
   font-size: 0px;
   text-align: center;
   z-index: 3;
+  outline: none;
 }
 
 .file_input::-webkit-file-upload-button {

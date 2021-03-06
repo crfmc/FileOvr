@@ -47,6 +47,8 @@ export const Ovr = () => {
     zIndex: "20",
   };
 
+  let hoverSend = true;
+
   return (
     <>
       <div className={styles.full_view}>
