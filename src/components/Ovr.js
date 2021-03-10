@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../styles/ovr.module.css";
 import { TopBar } from "./TopBar";
-import Up from "./Up.js";
-import Down from "./Down.js";
+import Send from "./Up";
+import Receive from "./Down";
 
 export const Ovr = () => {
   const [slideLeft, setSlideLeft] = useState(false);
@@ -35,7 +35,7 @@ export const Ovr = () => {
     backgroundColor: "#333333",
     color: "white",
     borderColor: "transparent",
-    boxShadow: "0px 0px 5px 5px #000000",
+    // boxShadow: "0px 0px 5px 5px #000000",
   };
 
   // POP-UP STYLING
@@ -46,8 +46,6 @@ export const Ovr = () => {
     height: "95vh",
     zIndex: "20",
   };
-
-  let hoverSend = true;
 
   return (
     <>
@@ -111,13 +109,7 @@ export const Ovr = () => {
               Duis eget ultrices risus. Nam id leo risus. Aliquam erat volutpat.
               Integer suscipit, sapien quis mattis laoreet, urna ex porta urna,
               accumsan condimentum metus turpis a erat. Integer vitae velit quis
-              sapien pharetra facilisis. Nam ut sagittis dolor. Integer
-              pharetra, augue non suscipit eleifend, tortor massa commodo nisi,
-              vitae egestas odio mi eu sem. Nullam nulla justo, tincidunt id
-              tristique a, egestas sed elit. Nullam nisi felis, rhoncus nec
-              eleifend sed, convallis sed quam. Proin massa nibh, dapibus at
-              ornare vel, tincidunt eu nulla. Morbi purus felis, fermentum ac
-              velit ac, condimentum faucibus erat.
+              sapien pharetra facilisis.
             </h4>
           </motion.button>
         )}
@@ -209,7 +201,7 @@ export const Ovr = () => {
           }}
         >
           <div className={styles.full_panel_left}>
-            {slideLeft && (
+            {/* {slideLeft && (
               <motion.div
                 className={styles.upload_file_shadow}
                 initial={{
@@ -225,7 +217,7 @@ export const Ovr = () => {
                   stiffness: 50,
                 }}
               ></motion.div>
-            )}
+            )} */}
             {!(slideLeft || slideRight) &&
               <div className={styles.bg_o}></div>
             }
@@ -314,8 +306,8 @@ export const Ovr = () => {
             A better way to share files privately.
           </h2>
         </motion.div>
-        {slideLeft && <Up />}
-        {slideRight && <Down />}
+        {slideLeft && <Send />}
+        {slideRight && <Receive />}
       </div>
     </>
   );

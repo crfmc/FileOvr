@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
 html {
   margin: none;
   overflow: hidden;
@@ -13,9 +18,8 @@ html {
 
 .subtext {
   color: black;
-  font-size: 28px;
+  font-size: 20px;
   font-family: Montserrat, sans-serif;
-  font-weight: normal;
   letter-spacing: 2px;
 }
 
@@ -148,7 +152,6 @@ html {
   height: 90vh;
   z-index: 1;
   margin-top: 10vh;
-  z-index: 2;
 }
 
 .function_button {

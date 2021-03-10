@@ -1,0 +1,6 @@
+.pouch_container {
+  position: relative;
+  background-color: lightgrey;
+  width: 30%;
+  height: 50px;
+}

@@ -3,15 +3,14 @@ html {
   margin: 0;
 }
 .download_file {
-  /* background-image: url(../images/full_leather_dark.svg);
-  background-position: cover; */
   background-color: transparent;
   align-items: center;
-  width: 80vw;
+  width: 60vw;
   height: 90vh;
   position: absolute;
-  z-index: 2;
-  margin: 25vh 10vh 10vh 35vh;
+  z-index: 1;
+  margin: 25vh 10vh 10vh 40vh;
+  font-family: Montserrat, sans-serif;
 }
 
 .download_file_shadow {
@@ -33,9 +32,9 @@ html {
 }
 
 .link_input {
-  width: 40%;
+  width: 50%;
   padding-bottom: 20px;
-  margin-left: 30%;
+  margin-left: 25%;
   margin-right: auto;
   margin-top: 2vh;
   font-size: 350%;
@@ -43,22 +42,33 @@ html {
   vertical-align: middle;
   border-radius: 30px;
   outline: none;
+  z-index: 10;
 }
 
 .download_link {
-  width: 10%;
+  width: 30%;
   color: white;
   background-color: black;
   opacity: 0.1;
-  margin-top: 5%;
-  margin-left: 45%;
+  margin-top: 3%;
+  margin-left: 35%;
   padding: 1%;
   border-color: black;
   border-radius: 60px;
-  font-size: 350%;
+  font-size: 150%;
   outline: none;
 }
-.download_link:hover {
+
+.download_link_pop {
+  width: 30%;
+  background-color: black;
+  margin-top: 3%;
+  margin-left: 35%;
+  padding: 1%;
+  border-color: black;
+  border-radius: 60px;
+  font-size: 150%;
+  outline: none;
   cursor: pointer;
   color: white;
   opacity: 0.8;

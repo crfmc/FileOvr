@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import styles from "../styles/up.module.css";
 import { motion } from "framer-motion";
+import Pouch from "./Pouch"
 
-const code_from_upload = "QWERTY123";
-
-export default class Upload extends Component {
-  render() {
+export default class Send extends Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state = {
+      code: ""
+    }
+  }
+  
+  render()
+  {
     return (
       <>
         <motion.div
@@ -21,12 +30,15 @@ export default class Upload extends Component {
           }}
         >
           <div className={styles.upload_file_prompt}>
+            <Pouch />
             <h2 className={styles.up_subtext}>Drop/Insert File</h2>
-            <input className={styles.file_input} type="file" />
+            <input
+              className={styles.file_input}
+              type="file" />
           </div>
           <div className={styles.code_from_upload_container}>
             <h2>Code</h2>
-            <h4 className={styles.code_from_upload}>{code_from_upload}</h4>
+            <h4 className={styles.code_from_upload}>{this.state.code}</h4>
           </div>
         </motion.div>
       </>

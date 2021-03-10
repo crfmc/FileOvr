@@ -2,11 +2,30 @@ import React, { Component } from "react";
 import styles from "../styles/down.module.css";
 import { motion } from "framer-motion";
 
-export default class Upload extends Component {
-  render() {
+export default class Receive extends Component
+{
+  constructor(props)
+  {
+    super(props)
+    this.state = {
+      link_input: ""
+    }
+  }
+
+  updateInput = (e) =>
+  {
+    e.preventDefault()
+    let input = e.target.value
+    this.setState({
+      link_input: input
+    }, console.log(this.state.link_input))
+  }
+
+  render()
+  {
     return (
       <>
-        <motion.div
+        {/* <motion.div
           className={styles.download_file_shadow}
           initial={{
             opacity: 0,
@@ -19,7 +38,7 @@ export default class Upload extends Component {
             type: "tween",
             delay: 0.5,
           }}
-        ></motion.div>
+        ></motion.div> */}
         <motion.div
           className={styles.download_file}
           initial={{
@@ -33,10 +52,18 @@ export default class Upload extends Component {
           }}
         >
           <h2 className={styles.down_title}>Enter Code:</h2>
-          <input className={styles.link_input} type="text" />
-          <button className={styles.download_link}>&darr;</button>
+          <input
+            className={styles.link_input}
+            type="text"
+            onChange={this.updateInput}
+          />
+          <button
+            className={this.state.link_input.length > 4 ? styles.download_link_pop : styles.download_link}
+
+          >
+              &darr;
+            </button>
         </motion.div>
       </>
-    );
-  }
+    );}
 }
