@@ -177,12 +177,6 @@ export const Ovr = () => {
             </h4>
           </motion.button>
         )}
-        <div className={(styles.bg_letters_container, styles.hidden)}>
-          <div
-            className={styles.bg_letters}
-            style={slideLeft || slideRight ? { display: "none" } : {}}
-          ></div>
-        </div>
         <motion.div
           className={styles.full_panel_container}
           initial={{ x: "-40vw" }}
@@ -248,7 +242,7 @@ export const Ovr = () => {
                 ? { x: "-40vw" }
                 : { x: "0" }
             }
-            style={slideLeft ? slideLeftStyle_sendButton : baseStyle_sendButton}
+            // style={slideLeft ? slideLeftStyle_sendButton : baseStyle_sendButton}
             onClick={() => {
               setSlideLeft(true);
               setSlideRight(false);
@@ -272,10 +266,10 @@ export const Ovr = () => {
                 ? { x: "-40vw" }
                 : { x: "0" }
             }
-            style={
-              slideRight
-                ? slideRightStyle_receiveButton
-                : baseStyle_receiveButton
+            style={ slideRightStyle_receiveButton
+              // slideRight
+              //   ? slideRightStyle_receiveButton
+              //   : baseStyle_receiveButton
             }
             onClick={() => {
               setSlideLeft(false);
