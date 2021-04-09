@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import styles from "../styles/up.module.css";
 import { motion } from "framer-motion";
-import Pouch from "./Pouch"
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Pouch from "./Pouch";
 
 export default class Send extends Component
 {
@@ -10,7 +12,8 @@ export default class Send extends Component
     super(props)
     this.state = {
       subfile: {},
-      code: ""
+      code: "",
+      waiting: false
     }
   }
 
@@ -18,14 +21,32 @@ export default class Send extends Component
   {
     this.setState({
       subfile: sub
+    })
+    this.showLoading()
+    setTimeout(() => {
+      this.setState({
+      code: sub.name,
+      waiting: false
     },
-    console.log(sub))
+    console.log(sub))}, 2000)
 
+  }
+
+  showLoading() {
+    this.setState({
+      waiting: true
+    })
+  }
+
+  codeToClipboard = () => {
+    const el = this.textArea
+    el.select()
+    document.execCommand("copy")
   }
   
   render()
   {
-    if (this.state.subfile.name)
+    if (this.state.waiting)
     {
       return (
         <>
@@ -35,11 +56,36 @@ export default class Send extends Component
             <h1>
               {this.state.subfile.name}
             </h1>
-            <h2>
-              Loading...
-            </h2>
+            <Loader
+              type="Oval"
+              color="#4d4d4d"
+              height={100}
+              width={100}
+            // timeout={3000}
+            />
           </div>
         </>
+      );
+    }
+    else if (this.state.code)
+    {
+      return (
+        <div className={styles.upload_file}>
+          <div className={styles.code_from_upload_container}>
+            <h2>Step 2: Copy your code</h2>
+            <textarea
+              className={styles.code_from_upload}
+              ref={(textarea) => this.textArea = textarea}
+              value={this.state.code}
+              readOnly
+            />
+            <button
+              onClick={() => this.codeToClipboard()}
+            >
+              Copy
+            </button>
+          </div>
+        </div>
       );
     }
     else {
@@ -60,10 +106,6 @@ export default class Send extends Component
             <div className={styles.upload_file_prompt}>
               <h2 className={styles.up_subtext}>Step 1: Drop your file here</h2>
               <Pouch onSub={this.handleSub}/>
-            </div>
-            <div className={styles.code_from_upload_container}>
-              <h2>Step 2: Copy your code</h2>
-              <h4 className={styles.code_from_upload}>{this.state.code}</h4>
             </div>
           </motion.div>
         </>
