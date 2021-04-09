@@ -4,6 +4,7 @@ https://medium.com/@650egor/simple-drag-and-drop-file-upload-in-react-2cb409d889
  */
 
 import React, { Component } from "react";
+import styles from "../styles/drag_drop.module.css"
 
 export default class DragNDrop extends Component
 {
@@ -49,7 +50,7 @@ export default class DragNDrop extends Component
     this.setState({ drag: false })
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0)
     {
-      this.props.handleDrop(e.dataTransfer.files)
+      this.props.handleDrop(e.dataTransfer.files[0])
       e.dataTransfer.clearData()
       this.dragCounter = 0
     }
@@ -78,36 +79,15 @@ export default class DragNDrop extends Component
   {
     return (
       <div
-        style={{display: 'inline-block', position: 'relative'}}
+        className={styles.drop_container}
         ref={this.dropRef}
       >
         {this.state.drag &&
-          <div
-            style={{
-              border: 'dashed grey 4px',
-              backgroundColor: 'rgba(255,255,255,.8)',
-              position: 'absolute',
-              top: 0,
-              bottom: 0,
-              left: 0, 
-              right: 0,
-              zIndex: 9999
-            }}
-          >
-          <div
-            style={{
-                position: 'absolute',
-                top: '50%',
-                right: 0,
-                left: 0,
-                textAlign: 'center',
-                color: 'grey',
-                fontSize: 15
-            }}
-          >
-            <h4>
-              Ready to catch...
-            </h4>
+          <div className={styles.outer_catch}>
+            <div className={styles.inner_catch}>
+              <h4>
+                Ready to catch...
+              </h4>
             </div>
           </div>
         }

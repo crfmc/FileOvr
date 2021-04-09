@@ -9,39 +9,66 @@ export default class Send extends Component
   {
     super(props)
     this.state = {
+      subfile: {},
       code: ""
     }
+  }
+
+  handleSub = (sub) =>
+  {
+    this.setState({
+      subfile: sub
+    },
+    console.log(sub))
+
   }
   
   render()
   {
-    return (
-      <>
-        <motion.div
-          className={styles.upload_file}
-          initial={{
-            x: -900,
-          }}
-          animate={{
-            x: 0,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-        >
-          <div className={styles.upload_file_prompt}>
-            <Pouch />
-            <h2 className={styles.up_subtext}>Drop/Insert File</h2>
-            <input
-              className={styles.file_input}
-              type="file" />
+    if (this.state.subfile.name)
+    {
+      return (
+        <>
+          <div
+            className={styles.upload_file}
+          >
+            <h1>
+              {this.state.subfile.name}
+            </h1>
+            <h2>
+              Loading...
+            </h2>
           </div>
-          <div className={styles.code_from_upload_container}>
-            <h2>Code</h2>
-            <h4 className={styles.code_from_upload}>{this.state.code}</h4>
-          </div>
-        </motion.div>
-      </>
-    );
+        </>
+      );
+    }
+    else {
+      return (
+        <>
+          <motion.div
+            className={styles.upload_file}
+            initial={{
+              x: -900,
+            }}
+            animate={{
+              x: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+          >
+            <div className={styles.upload_file_prompt}>
+              <h2 className={styles.up_subtext}>Step 1: Drop your file here</h2>
+              <Pouch onSub={this.handleSub}/>
+            </div>
+            <div className={styles.code_from_upload_container}>
+              <h2>Step 2: Copy your code</h2>
+              <h4 className={styles.code_from_upload}>{this.state.code}</h4>
+            </div>
+          </motion.div>
+        </>
+      );
+    }
+    
   }
 }

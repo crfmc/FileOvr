@@ -15,59 +15,42 @@
 
 .upload_file_prompt {
   width: 80%;
-  height: 30vh;
+  height: 50vh;
   margin: 5vh auto 5vh auto;
   font-size: 150%;
   color: #4d4d4d;
 }
 
 .up_subtext {
-  font-size: 150%;
+  font-size: 100%;
   margin: 0 0 1vh 0;
   text-align: center;
 }
 
-.file_input {
-  background-color: white;
-  width: 20vw;
-  height: 15vh;
-  border-radius: 40px;
-  box-shadow: 0px 0px 10px 1px #4d4d4d;
-  margin: 0 0 5vh 0;
-  padding: 0;
-  font-size: 0px;
-  text-align: center;
-  z-index: 3;
-  outline: none;
-}
-
-.file_input::-webkit-file-upload-button {
-  visibility: hidden;
-  z-index: 5;
-}
-
-.file_input:hover {
-  cursor: url("../images/upload_file.svg"), progress;
-}
+/* .pouch_container {
+  width: 1000px;
+  height: 600px;
+  background-color: beige;
+} */
 
 .code_from_upload_container {
   width: 80%;
-  height: 20vh;
-  margin: 10vh auto 5vh auto;
-  font-size: 150%;
+  height: 30vh;
+  margin: 0vh auto 0vh auto;
   color: #4d4d4d;
 }
 
 .code_from_upload_container h2 {
+  font-size: 150%;
   margin: 5vh auto 2vh auto;
 }
 
 .code_from_upload {
   background-color: white;
   border-radius: 10px;
-  font-size: 3vw;
+  font-size: 30px;
   width: 30vw;
-  height: 10vh;
+  height: 5vh;
   margin: 0 auto 0 auto;
   /* box-shadow: 0px 0px 10px 2px #4d4d4d; */
   box-shadow: 0px 0px 10px 1px #4d4d4d;
