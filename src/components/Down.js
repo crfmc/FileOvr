@@ -53,9 +53,10 @@ export default class Receive extends Component
         >
           <h2 className={styles.down_title}>Enter Code:</h2>
           <input
-            className={styles.link_input}
+            className={this.state.link_input.length > 4 ? styles.link_input_pop : styles.link_input}
             type="text"
             onChange={this.updateInput}
+            maxLength="8"
           />
           <button
             className={this.state.link_input.length > 4 ? styles.download_link_pop : styles.download_link}

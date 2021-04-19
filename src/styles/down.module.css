@@ -37,10 +37,27 @@ html {
   margin-left: 25%;
   margin-right: auto;
   margin-top: 2vh;
-  font-size: 350%;
+  font-size: 300%;
   text-align: center;
   vertical-align: middle;
   border-radius: 30px;
+  border-style: solid;
+  outline: none;
+  z-index: 10;
+}
+
+.link_input_pop {
+  width: 50%;
+  padding-bottom: 20px;
+  margin-left: 25%;
+  margin-right: auto;
+  margin-top: 2vh;
+  font-size: 300%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: black;
   outline: none;
   z-index: 10;
 }

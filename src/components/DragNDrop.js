@@ -50,7 +50,8 @@ export default class DragNDrop extends Component
     this.setState({ drag: false })
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0)
     {
-      this.props.handleDrop(e.dataTransfer.files[0])
+      // console.log(e.dataTransfer.files)
+      this.props.handleDrop(e.dataTransfer.files)
       e.dataTransfer.clearData()
       this.dragCounter = 0
     }
@@ -85,9 +86,9 @@ export default class DragNDrop extends Component
         {this.state.drag &&
           <div className={styles.outer_catch}>
             <div className={styles.inner_catch}>
-              <h4>
-                Ready to catch...
-              </h4>
+              {/* <h4>
+                :O
+              </h4> */}
             </div>
           </div>
         }

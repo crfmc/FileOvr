@@ -12,6 +12,7 @@ export default class Send extends Component
     super(props)
     this.state = {
       subfile: {},
+      subfile_abbrev: "",
       code: "",
       waiting: false
     }
@@ -20,15 +21,17 @@ export default class Send extends Component
   handleSub = (sub) =>
   {
     this.setState({
-      subfile: sub
+      subfile: sub.file,
+      subfile_abbrev: sub.file_abbrev
     })
     this.showLoading()
-    setTimeout(() => {
+    setTimeout(() =>
+    {
       this.setState({
-      code: sub.name,
-      waiting: false
-    },
-    console.log(sub))}, 2000)
+        code: sub.file_abbrev,
+        waiting: false
+      })
+    }, 500)
 
   }
 
@@ -43,6 +46,16 @@ export default class Send extends Component
     el.select()
     document.execCommand("copy")
   }
+
+  handleSendAgain = () =>
+  {
+    this.setState({
+      subfile: {},
+      subfile_abbrev: "",
+      code: "",
+      waiting: false
+    })
+  }
   
   render()
   {
@@ -51,10 +64,10 @@ export default class Send extends Component
       return (
         <>
           <div
-            className={styles.upload_file}
+            className={styles.upload_file_waiting}
           >
             <h1>
-              {this.state.subfile.name}
+              {this.state.subfile_abbrev}
             </h1>
             <Loader
               type="Oval"
@@ -72,19 +85,28 @@ export default class Send extends Component
       return (
         <div className={styles.upload_file}>
           <div className={styles.code_from_upload_container}>
-            <h2>Step 2: Copy your code</h2>
-            <textarea
-              className={styles.code_from_upload}
-              ref={(textarea) => this.textArea = textarea}
-              value={this.state.code}
-              readOnly
-            />
+            <h2>Here's your code:</h2>
+            <div className={styles.code_and_copy_container}>
+              <textarea
+                className={styles.code_from_upload}
+                ref={(textarea) => this.textArea = textarea}
+                value={this.state.code}
+                readOnly
+              />
+              <div
+                className={styles.copy_button}
+                onClick={() => this.codeToClipboard()}
+              >
+              </div>
+            </div>
             <button
-              onClick={() => this.codeToClipboard()}
+              className={styles.send_again_button}
+              onClick={this.handleSendAgain}
             >
-              Copy
+              Send another file
             </button>
-          </div>
+
+            </div>
         </div>
       );
     }
@@ -103,10 +125,7 @@ export default class Send extends Component
               duration: 0.6,
             }}
           >
-            <div className={styles.upload_file_prompt}>
-              <h2 className={styles.up_subtext}>Step 1: Drop your file here</h2>
-              <Pouch onSub={this.handleSub}/>
-            </div>
+            <Pouch onSub={this.handleSub}/>
           </motion.div>
         </>
       );

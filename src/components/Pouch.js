@@ -9,20 +9,25 @@ import styles from "../styles/pouch.module.css"
 export default class Pouch extends Component
 {
   state = {
-    file: {}
+    file: {},
+    file_abbrev: ""
   }
 
   handleChooseFile = (e) =>
   {
     let chosen = e.target.files[0]
-    console.log(chosen)
-    this.setState({file: chosen})
+    this.setState({
+      file: chosen,
+      file_abbrev: this.abbrev(chosen.name)
+    })
   }
 
   handleDrop = (up_file) => 
   {
-    console.log(up_file)
-    this.setState({file: up_file})
+    this.setState({
+      file: up_file[0],
+      file_abbrev: this.abbrev(up_file[0].name)
+    })
     // let fileList = this.state.files
     // for (var i = 0; i < files.length; i++) 
     // {
@@ -36,7 +41,24 @@ export default class Pouch extends Component
   {
     // e.preventDefault()
     // e.stopPropagation()
-    this.props.onSub(this.state.file)
+    this.props.onSub({
+      'file': this.state.file,
+      'file_abbrev': this.state.file_abbrev
+    })
+  }
+
+  handleCancel = () =>
+  {
+    this.setState({
+      file: {},
+      file_abbrev: ""
+    })
+  }
+
+  abbrev = (str) => {
+    let len = str.length;
+    if (len < 30) return str
+    else return str.substring(0,20) + " ... " + str.substring((len - 6))
   }
 
   render()
@@ -46,13 +68,25 @@ export default class Pouch extends Component
     {
       return (
         <>
-          {this.state.file.name}
-          <button
-            className={styles.send_file}
-            onClick={this.handleSubmit}
-          >
-            Send this file
-          </button>
+          <div className={styles.show_selected_file}>
+            <div className={styles.file_option_container}>
+              <button
+                className={styles.cancel_button}
+                onClick={this.handleCancel}
+              >
+                x
+              </button>
+              <h1 className={styles.selected_filename}>
+                {this.state.file_abbrev}
+              </h1>
+            </div>
+            <button
+              className={styles.send_file}
+              onClick={this.handleSubmit}
+            >
+              Send this file
+            </button>
+          </div>
         </>
       );
     }
@@ -61,24 +95,22 @@ export default class Pouch extends Component
       return (
         <>
           <DragNDrop handleDrop={this.handleDrop}>
-            <div className={styles.pouch_container}>
-              {/* {this.state.files.map((file, i) =>
+            {/* {this.state.files.map((file, i) =>
+            {
+              if (i == 0)
               {
-                if (i == 0)
-                {
-                  <div key={i}>{file}</div>
-                }
+                <div key={i}>{file}</div>
               }
-              )} */}
-              {this.state.file.name}
-              <h3 className={styles.choose_file_subtext}>or click here to find it</h3>
-              <input
-                className={styles.choose_file}
-                type="file"
-                onChange={this.handleChooseFile}
-              />
-            </div>
-        </DragNDrop>
+            }
+            )} */}
+            <h1 className={styles.up_subtext}>Drop your file here</h1>
+            <h3 className={styles.choose_file_subtext}>...or click here to find it</h3>
+            <input
+              className={styles.choose_file}
+              type="file"
+              onChange={this.handleChooseFile}
+            />
+          </DragNDrop>
         </>
       );
     }
