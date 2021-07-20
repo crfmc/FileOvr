@@ -1,6 +1,6 @@
 # FileOvr
 
-A filesharing website created by [CJ](), [Kanji](), and [Cesar]()
+A Peer-2-Peer filesharing website.
 
 # Running
 
